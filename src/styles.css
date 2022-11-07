@@ -1,8 +1,27 @@
 /*CSS Stylesheet*/
 
+:root {
+    --cream: #FEFFC6;
+    --gamboge: #E1982D;
+    --dark-moss-green: #4C5A24;
+    --sepia: #784A10;
+    --maximum-blue-purple: #AEAFF0;
+}
+
+@font-face {
+    font-family: 'amstera';
+    src: url('./Portillo\ Bryant.otf');
+}
+
+@font-face {
+    font-family: 'cafe';
+    src: url('./Louis\ George\ Cafe.ttf');
+}
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -12,5 +31,52 @@ body {
     background-image: url('./peakpx.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
 }
+
+header {
+    background-color: var(--maximum-blue-purple);
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-width: 100vw;
+    height: 6rem;
+    font-family: 'amstera';
+    font-size: 3rem;
+    font-weight: 100;
+    color: white;
+    text-shadow: 0 0 4px black;
+    box-shadow: 0 0 4px 0 var(--cream);
+}
+
+/*Nav and Tabs-----------------------------------------------------*/
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+nav button {
+    font-family: 'cafe';
+    border-style: none;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+button:hover {
+    box-shadow: 0 0 12px 0 var(--maximum-blue-purple);
+}
+button:active {
+    background-color: var(--maximum-blue-purple);
+}
+/*-------------------------------------------------------------------*/
+
+main {
+    flex: 1;
+    display: flex;
+}
+
+
+
 
