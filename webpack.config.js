@@ -8,7 +8,10 @@ module.exports = {
             template: './src/index.html'
         }),
     ],
-    entry: './src/index.js',
+    entry: {
+        index: './src/index.js',
+        generator: './domGenerator.js'
+    },
     output: {
         filename : '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
