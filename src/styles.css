@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: 'amstera';
-    src: url('./Portillo\ Bryant.otf');
+    src: url('./Castedral.otf');
 }
 
 @font-face {
@@ -38,18 +38,30 @@ body {
 
 header {
     background-color: var(--maximum-blue-purple);
-    display: grid;
+    display: flex;
     justify-content: center;
-    align-content: center;
     min-width: 100vw;
     height: 6rem;
+    box-shadow: 0 0 4px 0 var(--cream);
+    align-items: center;
+}
+
+header img {
+    height: 4rem;
+    border-radius: 8px;
+    position: absolute;
+    left: -6rem;
+    top: 5px;
+ }
+ header h1 {
     font-family: 'amstera';
     font-size: 3rem;
     font-weight: 100;
     color: white;
     text-shadow: 0 0 4px black;
-    box-shadow: 0 0 4px 0 var(--cream);
-}
+    position: relative;
+    width: fit-content;
+ }
 
 /*Nav and Tabs-----------------------------------------------------*/
 nav {
@@ -168,3 +180,25 @@ main.menu > article.content {
 
 /*---------------------------------------------------------------------*/
 
+/*Contacts tab--------------------------------------------------------*/
+
+main.contactUs > article {
+    width: fit-content;
+    padding-right: 8rem;
+    padding-left: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+main.contactUs ul {
+    margin-top: 1.5rem;
+}
+main.contactUs li {
+    margin: .5rem 0;
+}
+main.contactUs img {
+    width: 10rem;
+}
+
+li {
+    list-style: none;
+}

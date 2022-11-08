@@ -9,6 +9,7 @@ import muleImg from './mule.jpeg';
 import pieImg from './pie.jpeg';
 import piperadeImg from './piperade.jpeg';
 import boulevardierImg from './boulevardier.jpeg';
+import logo from './logo.png';
 
 let restaurantDescription = "Come to this restaurant to enjoy the best in farm-to-table cuisine and atmosphere. With a wide selection of delectable dishes and a creative twist on traditional French cooking, this is the place for any occasion. From weddings to graduations, from proposals to anniversaries, this restaurant is perfect for any life event. Treat yourself in the near future! The dining room is both relaxed and intimate, so you can feel comfortable enjoying your meal.";
 let testamonials = [
@@ -84,8 +85,33 @@ let menuContent = [
     },
 ]
 
+let contacts = [
+    {
+        name: "Irving Snider",
+        position: "Chef",
+        number: "(111)111-1111",
+        email: "snideri@notreal.com",
+        image: logo,
+    },
+    {
+        name: "Norma Park",
+        position: "Manager",
+        number: "(222)222-2222",
+        email: "parkn@notreal.com",
+        image: logo,
+    },
+    {
+        name: "Marjorie May",
+        position: "Dishwasher",
+        number: "(333)333-3333",
+        email: "maym@notreal.com",
+        image: logo,
+    },
+]
+
 export {
     restaurantDescription,
     testamonials,
-    menuContent
+    menuContent,
+    contacts
 }

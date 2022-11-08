@@ -20,4 +20,5 @@ menuButton.addEventListener('click', ()=>{
 //Contact tab
 contactButton.addEventListener('click', ()=>{
     Generator.clear();
+    Generator.generateContactUs();
 });

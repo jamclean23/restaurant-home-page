@@ -1,12 +1,22 @@
 //Javascript for generating DOM 
 
 import * as Content from './content.js';
+import logoImg from './logo.png';
 
 function generateInitial() {
     //Add the header
     const header = document.createElement('header');
-    header.innerText = "A Random Restaurant";
     document.body.appendChild(header);
+
+    //Add header text
+    const text = document.createElement('h1');
+    text.innerText = "A Random Restaurant";
+    header.appendChild(text);
+
+    //Add the logo
+    const logo = document.createElement('img');
+    logo.src = logoImg;
+    text.appendChild(logo);
 
     //Add the navBar and attach buttons
     const navBar = document.createElement('nav');
@@ -101,6 +111,42 @@ function generateMenu() {
     }
 }
 
+function generateContactUs() {
+    const main = addMain("contactUs");
+    for (let i = 0; i < Content.contacts.length; i++) {
+
+        const article = document.createElement('article');
+
+        const image = document.createElement('img');
+        image.src = Content.contacts[i].image;
+        article.appendChild(image);
+
+        const div = document.createElement('div');
+        article.appendChild(div);
+
+        const name = document.createElement('h2');
+        name.innerText = Content.contacts[i].name;
+        div.appendChild(name);
+
+        const position = document.createElement('h3');
+        position.innerText = Content.contacts[i].position;
+        div.appendChild(position);
+
+        const ul = document.createElement('ul');
+        div.appendChild(ul);
+        
+        const number = document.createElement('li');
+        number.innerText = "# " + Content.contacts[i].number;
+        ul.appendChild(number);
+
+        const email = document.createElement('li');
+        email.innerText = Content.contacts[i].email;
+        ul.appendChild(email);
+
+        main.appendChild(article);
+    }
+}
+
 function clear() {
     const main = document.querySelector('main');
     if (main) {
@@ -119,5 +165,6 @@ export {
     generateInitial,
     generateHome,
     generateMenu,
+    generateContactUs,
     clear
 }
