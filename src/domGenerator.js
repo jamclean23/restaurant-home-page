@@ -70,6 +70,33 @@ function generateMenu() {
         for (let j = 0; j < 2; j++) {
             const article = document.createElement('article');
             main.appendChild(article);
+            //populate title cards
+            if (j == 0) {
+                article.classList.add('title');
+                article.innerText = Content.menuContent[i].title;
+            //populate menu item cards
+            } else {
+                article.classList.add('content');
+                //iterate through menu items for each meal
+                for (const item in Content.menuContent[i].menu){
+                    const menuItem = document.createElement('article');
+                    //title of menu item
+                    const h3 = document.createElement('h3');
+                    h3.innerText = Content.menuContent[i].menu[item].title;
+                    menuItem.appendChild(h3);
+                    //image of dish
+                    const image = document.createElement("img");
+                    image.src = Content.menuContent[i].menu[item].image;
+                    menuItem.appendChild(image);
+                    //description of dish
+                    const p = document.createElement('p');
+                    p.innerText = Content.menuContent[i].menu[item].description;
+                    menuItem.appendChild(p);
+                    //Create the card
+                    article.appendChild(menuItem);
+                }
+
+            }
         }
     }
 }

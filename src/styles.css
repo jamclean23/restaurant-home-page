@@ -78,23 +78,25 @@ main {
     overflow-y: auto;
     grid-row-start: 4;
 }
-/*Home tab-----------------------------------------------------------*/
-main.home {
-    gap: 1rem;
-    padding: 1rem;
-}
 
-
-main.home > article {
+/*Articles*/
+article {
     background-color: var(--cream);
     border-radius: 8px;
     padding: 2rem;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1rem;
+    box-shadow: 0 0 8px 0 var(--sepia);
+
 
 }
 
+/*Home tab-----------------------------------------------------------*/
+main.home {
+    gap: 1rem;
+    padding: 1rem;
+}
 /*Restaurant description*/
 main.home > article:first-child {
     min-height: 10rem;
@@ -107,7 +109,6 @@ main.home > article:first-child > h2 {
     margin-top: .5rem;
     margin-bottom: 1rem;
 }
-
 /*Testimonials*/
 main.home > article:nth-child(n + 2) {
     min-height: 10rem;
@@ -124,6 +125,46 @@ main.home > article:nth-child(n + 2) > p:last-child {
 
 /*---------------------------------------------------------------------*/
 
+/*Menu tab-------------------------------------------------------------*/
 
+/*Title card*/
+main.menu > article.title {
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: 4rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+/*Menu card*/
 
+main.menu > article.content h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+main.menu > article.content > article > img {
+    width: 15rem;
+    height: 10rem;
+    border-radius: 8px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    object-fit: fill;
+    box-shadow: 0 0 4px 0 var(--sepia);
+}
+
+main.menu > article.content {
+    background-color: transparent;
+    box-shadow: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 2rem;
+}
+
+/*---------------------------------------------------------------------*/
 

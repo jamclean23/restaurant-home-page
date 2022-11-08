@@ -15,6 +15,7 @@ homeButton.addEventListener('click', ()=>{
 //Menu tab
 menuButton.addEventListener('click', ()=>{
     Generator.clear();
+    Generator.generateMenu();
 });
 //Contact tab
 contactButton.addEventListener('click', ()=>{
