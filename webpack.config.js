@@ -10,7 +10,8 @@ module.exports = {
     ],
     entry: {
         index: './src/index.js',
-        generator: './domGenerator.js'
+        generator: './src/domGenerator.js',
+        content: './src/content.js',
     },
     output: {
         filename : '[name].bundle.js',

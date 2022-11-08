@@ -28,12 +28,10 @@
 body {
     min-height: 100vh;
     max-height: 100vh;
-    width: 100%;
     background-color: brown;
     background-image: url('./peakpx.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    overflow-x: hidden;
     display: grid;
     grid-template-rows: min-content min-content  1rem 1fr;
 }
@@ -80,23 +78,51 @@ main {
     overflow-y: auto;
     grid-row-start: 4;
 }
+/*Home tab-----------------------------------------------------------*/
 main.home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     gap: 1rem;
     padding: 1rem;
 }
 
-main.home > article:first-child {
+
+main.home > article {
     background-color: var(--cream);
-    min-height: 10rem;
-    width: 80vw;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+
 }
 
-main.home > article:nth-child(n + 2) {
-    background-color: red;
+/*Restaurant description*/
+main.home > article:first-child {
+    min-height: 10rem;
+    width: 70vw;
+    font-size: 1.5rem;
 }
+main.home > article:first-child > h2 {
+    display: flex;
+    justify-content: center;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+}
+
+/*Testimonials*/
+main.home > article:nth-child(n + 2) {
+    min-height: 10rem;
+    width: 60vw;
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+main.home > article:nth-child(n + 2) > p:last-child {
+    align-self: flex-end;
+    margin-top: 1rem;
+} 
+
+/*---------------------------------------------------------------------*/
 
 
 
